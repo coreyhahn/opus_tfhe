@@ -1,0 +1,176 @@
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Nov  7 01:04:18 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source synth/scripts/power_est.tcl
+# set dcp [lindex $argv 0]
+# set out [lindex $argv 1]
+# file mkdir $out
+# open_checkpoint $dcp
+Command: open_checkpoint /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_033_full_genddr_incr029/opus_full_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1428.020 ; gain = 0.000 ; free physical = 40270 ; free virtual = 294056
+INFO: [Device 21-403] Loading part xcvu9p-fsgd2104-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 5538.430 ; gain = 3.000 ; free physical = 36299 ; free virtual = 290232
+INFO: [Netlist 29-17] Analyzing 81210 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 57 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'bd_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'bd_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'bd_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/sys_clk_in' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'bd_i/ddr4_1/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'bd_i/ddr4_1/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'bd_i/ddr4_1/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/sys_clk_in' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'bd_i/ddr4_2/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'bd_i/ddr4_2/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'bd_i/ddr4_2/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/sys_clk_in' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'bd_i/ddr4_3/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'DRIVE' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'bd_i/ddr4_3/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'SLEW' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'bd_i/ddr4_3/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/sys_clk_in' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Read ShapeDB Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 8725.320 ; gain = 571.500 ; free physical = 28939 ; free virtual = 282902
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Power 33-23] Power model is not available for xiphy_riu_or
+INFO: [Power 33-23] Power model is not available for genVref.u_hpio_vref
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Read Netlist Cache: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 17573.527 ; gain = 168.500 ; free physical = 21063 ; free virtual = 275196
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 17573.527 ; gain = 0.000 ; free physical = 21054 ; free virtual = 275188
+Read PlaceDB: Time (s): cpu = 00:01:31 ; elapsed = 00:01:34 . Memory (MB): peak = 19011.207 ; gain = 1437.680 ; free physical = 20150 ; free virtual = 274105
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 19011.207 ; gain = 0.000 ; free physical = 20154 ; free virtual = 274110
+Read RouteStorage: Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 20118.879 ; gain = 1107.672 ; free physical = 19694 ; free virtual = 273604
+Read Physdb Files: Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 20118.879 ; gain = 2713.852 ; free physical = 19694 ; free virtual = 273604
+Finished XDEF File Restore: Time (s): cpu = 00:11:25 ; elapsed = 00:11:47 . Memory (MB): peak = 21114.059 ; gain = 3709.031 ; free physical = 18262 ; free virtual = 272186
+INFO: [Project 1-837] Checkpoint contains data reused from an Incremental Compile. Run report_incremental_reuse for further information about reused data.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/cah/r2d2/sc2data/tools/Vivado/2024.2/data/ip'.
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.26 . Memory (MB): peak = 21698.840 ; gain = 0.000 ; free physical = 17770 ; free virtual = 271821
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9923 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 12 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 5010 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 4 instances
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 32 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 288 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 124 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 4 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 26 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 9 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 844 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2293 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 1184 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 16 instances
+  SRLC32E => SRL16E: 12 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2024.2 (64-bit) build 5239630
+WARNING: [Vivado 12-23575] Critical violations of the methodology design rules detected. Critical violations may contribute to timing failures or cause functional issues in hardware. Run report_methodology for more information.
+open_checkpoint: Time (s): cpu = 00:36:14 ; elapsed = 00:24:34 . Memory (MB): peak = 21698.840 ; gain = 20270.820 ; free physical = 17755 ; free virtual = 271807
+# set_switching_activity -deassert_resets
+set_switching_activity: Time (s): cpu = 00:24:59 ; elapsed = 00:05:09 . Memory (MB): peak = 23548.637 ; gain = 1849.797 ; free physical = 13201 ; free virtual = 267794
+# report_power -hierarchical_depth 4 -file $out/power_t12p5.rpt
+Command: report_power -hierarchical_depth 4 -file evidence/stage3/power/vivado_20261107_010416/power_t12p5.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:09:02 ; elapsed = 00:03:24 . Memory (MB): peak = 23595.820 ; gain = 47.184 ; free physical = 11827 ; free virtual = 267033
+# set eng [get_cells bd_i/opus_0]
+# foreach ty {register shift_register lut_ram dsp} {
+#     set_switching_activity -type $ty -hier -toggle_rate 50 -static_probability 0.5 $eng
+# }
+set_switching_activity: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 23595.820 ; gain = 0.000 ; free physical = 11804 ; free virtual = 267043
+set_switching_activity: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 23595.820 ; gain = 0.000 ; free physical = 8145 ; free virtual = 263383
+set_switching_activity: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 23595.820 ; gain = 0.000 ; free physical = 7600 ; free virtual = 262839
+set_switching_activity: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 23595.820 ; gain = 0.000 ; free physical = 1208 ; free virtual = 254423
+# report_power -hierarchical_depth 4 -file $out/power_eng50.rpt
+Command: report_power -hierarchical_depth 4 -file evidence/stage3/power/vivado_20261107_010416/power_eng50.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:09:31 ; elapsed = 00:02:37 . Memory (MB): peak = 23611.828 ; gain = 16.008 ; free physical = 4494 ; free virtual = 242209
+# puts POWER_EST_OK
+POWER_EST_OK
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 01:41:09 2026...
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Nov  7 01:41:34 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source synth/scripts/sysmon_log.tcl
+# set secs [lindex $argv 0]
+# set per [lindex $argv 1]
+# set out [lindex $argv 2]
+# open_hw_manager
+open_hw_manager: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1517.855 ; gain = 73.910 ; free physical = 30828 ; free virtual = 268026
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.2
+  **** Build date : Oct 29 2024 at 10:16:47
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-12:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+# open_hw_target localhost:3121/xilinx_tcf/Xilinx/21440289J04FA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/21440289J04FA
+# set dev [lindex [get_hw_devices xcvu9p*] 0]
+# current_hw_device $dev
+# set sms [get_hw_sysmons -of_objects $dev]
+# set f [open $out w]
+# puts $f "t_s,sysmon,temp_c,vccint_v,vccaux_v,vccbram_v"
+# set t0 [clock milliseconds]
+# while {[expr {([clock milliseconds] - $t0) / 1000.0}] < $secs} {
+#     foreach sm $sms {
+#         refresh_hw_sysmon $sm
+#         puts $f [format "%.1f,%s,%s,%s,%s,%s" [expr {([clock milliseconds] - $t0) / 1000.0}] [get_property NAME $sm] \
+#             [get_property TEMPERATURE $sm] [get_property VCCINT $sm] [get_property VCCAUX $sm] [get_property VCCBRAM $sm]]
+#     }
+#     flush $f
+#     after [expr {int($per * 1000)}]
+# }
+# close $f
+# close_hw_target
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Xilinx/21440289J04FA
+# puts SYSMON_OK
+SYSMON_OK
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 01:43:02 2026...
+  board lock HELD: /home/cah/r2d2/code/fpga/.fable5_board.lock (reproduce_sysmon)
+  board lock released (reproduce_sysmon)
+  board lock HELD: /home/cah/r2d2/code/fpga/.fable5_board.lock (thermal_load)
+  board lock released (thermal_load)

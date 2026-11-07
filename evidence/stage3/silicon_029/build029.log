@@ -1,0 +1,37 @@
+=== Tue Nov  3 05:56:31 PM MST 2026 host snoke git 7994da9fe590e14825ba830d0e8622ee3eae4afd (DIRTY: 8 tracked files modified)
+=== create_full (VERSION 0x7994da9f) ===
+CSR_VERSION: 0x7994da9f
+ROMDIR_F: /home/cah/r2d2/code/fpga/opus_tfhe/synth/roms/P5_mont
+ROMDIR_I: /home/cah/r2d2/code/fpga/opus_tfhe/synth/roms/P5_table
+ADDRESS MAP:
+  /xdma_0/M_AXI/SEG_opus_0_reg0                                off=0x0000001000000000 range=0x0000000000400000
+  /xdma_0/M_AXI/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK               off=0x0000000000000000 range=0x0000000100000000
+  /xdma_0/M_AXI/SEG_ddr4_1_C0_DDR4_ADDRESS_BLOCK               off=0x0000000100000000 range=0x0000000100000000
+  /xdma_0/M_AXI/SEG_ddr4_2_C0_DDR4_ADDRESS_BLOCK               off=0x0000000200000000 range=0x0000000100000000
+  /xdma_0/M_AXI/SEG_ddr4_3_C0_DDR4_ADDRESS_BLOCK               off=0x0000000300000000 range=0x0000000100000000
+  /xdma_0/M_AXI_LITE/SEG_opus_0_reg0                           off=0x00000000 range=0x00001000
+  /opus_0/m0/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK                  off=0x000000000 range=0x100000000
+  /opus_0/m1/SEG_ddr4_1_C0_DDR4_ADDRESS_BLOCK                  off=0x000000000 range=0x100000000
+  /opus_0/m2/SEG_ddr4_2_C0_DDR4_ADDRESS_BLOCK                  off=0x000000000 range=0x100000000
+  /opus_0/m3/SEG_ddr4_3_C0_DDR4_ADDRESS_BLOCK                  off=0x000000000 range=0x100000000
+SYNTH_OPTS: synth_1 keep_equivalent_registers=1 resource_sharing=off flatten=rebuilt
+SYNTH_OPTS: bd_opus_0_0_synth_1 keep_equivalent_registers=1 resource_sharing=off flatten=rebuilt
+=== build Tue Nov  3 06:02:10 PM MST 2026 ===
+SYNTH_OPTS: synth_1 keep_equivalent_registers=1 resource_sharing=off
+SYNTH_OPTS: bd_opus_0_0_synth_1 keep_equivalent_registers=1 resource_sharing=off
+IMPL_CFG: place -directive SSI_SpreadLogic_high, post-place + post-route phys_opt AggressiveExplore
+IMPL_CFG: route -directive AggressiveExplore
+IMPL_CFG: incremental from /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_028_rt019_AggressiveExplore/opus_full_routed.dcp (TimingClosure)
+ENGINE_SYNTH_OPTS_OK: /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_029_full_cycfix_incr028/proj/opus_full.runs/bd_opus_0_0_synth_1/runme.log
+CLOCK_GATE_OK: 250MHz clocks: pipe_clk xdma_0_axi_aclk
+PBLOCK: pb_slr0 cells=10136 non_engine=0
+PBLOCK: pb_slr1 cells=18406 non_engine=0
+PBLOCK: pb_slr2 cells=10602 non_engine=0
+TIMING: WNS=0.006 TNS=0.000 WHS=0.010 THS=0.000
+UTIL: LUT=805671 FF=739243 BRAM36=800.5 URAM=856 DSP=5022
+PCIE_LOC: bd_i/xdma_0/inst/pcie4_ip_i/inst/bd_xdma_0_0_pcie4_ip_pcie_4_0_pipe_inst/pcie_4_0_e4_inst -> PCIE40E4_X1Y2
+EXC_MATCHED_PIN_COUNT: 40 (outside xdma_0: 0)
+BITSTREAM: /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_029_full_cycfix_incr028/opus_full.bit
+-rw-rw-r-- 1 cah cah 69157209 2026-11-04 02:10:32.000000000 -0700 /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_029_full_cycfix_incr028/opus_full.bit
+-rw-rw-r-- 1 cah cah     2587 2026-11-04 02:10:44.000000000 -0700 /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_029_full_cycfix_incr028/opus_full.ltx
+=== DONE Wed Nov  4 03:18:13 AM MST 2026: /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_029_full_cycfix_incr028 ===

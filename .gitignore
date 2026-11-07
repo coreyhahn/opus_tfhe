@@ -1,0 +1,24 @@
+# Verilator and simulation outputs
+obj_dir*/
+*.vcd
+*.fst
+# Vivado
+synth/out_*/
+*.jou
+*.log
+*.str
+.Xil/
+# Python / Rust
+.venv/
+__pycache__/
+target/
+# editor
+*.swp
+# evidence logs are the deliverable: never ignore them
+!evidence/**/*.log
+# bulky regenerable oracle outputs (keys, ciphertext batches)
+data/
+target-ctr/
+tb/vec/
+synth/roms/
+.scratch/

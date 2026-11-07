@@ -1,0 +1,33 @@
+{
+ "tool": "sw/pbs_run.py",
+ "label": "silicon",
+ "utc": "2026-11-07T08:43:42.862817+00:00",
+ "host": "snoke",
+ "git": "a82b160d55ede75e32315965912842f49a3a14a6-dirty",
+ "argv": [
+  "sw/pbs_run.py",
+  "--keys",
+  "data/v25k/ks32_s2",
+  "--count",
+  "12500",
+  "--runs",
+  "36",
+  "--expect-version",
+  "55306ef1"
+ ],
+ "param_set": "PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128",
+ "p_fail": "2^-129.58",
+ "P": 32,
+ "batch": 8,
+ "ksl": 184,
+ "aclk_mhz": 250.0,
+ "bsk_bases": [
+  "0x100000",
+  "0x200000",
+  "0x300000"
+ ],
+ "ksk_base": "0x400000",
+ "seeds": [],
+ "pass": false,
+ "fatal": "MAGIC 52100002 != 0f7fe001: wrong/old design loaded"
+}

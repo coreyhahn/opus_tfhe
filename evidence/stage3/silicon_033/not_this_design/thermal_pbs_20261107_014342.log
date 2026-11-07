@@ -1,0 +1,7 @@
+# pbs_run silicon host snoke git a82b160d55ede75e32315965912842f49a3a14a6-dirty date 2026-11-07T08:43:42.862817+00:00
+$ sw/pbs_run.py --keys data/v25k/ks32_s2 --count 12500 --runs 36 --expect-version 55306ef1
+prep: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_prep_P5_L184 is current (stamp matches keys + pack_ddr; images by /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_model/target/release/dump_engine on snoke)
+MAGIC=52100002 VERSION=232d16f4 CALIB=90a0b08
+FATAL: MAGIC 52100002 != 0f7fe001: wrong/old design loaded
+FAIL
+evidence: /home/cah/r2d2/code/fpga/opus_tfhe/evidence/stage3/pbs_run/pbs_run_20261107_014342_s2.json /home/cah/r2d2/code/fpga/opus_tfhe/evidence/stage3/pbs_run/pbs_run_20261107_014342_s2.log

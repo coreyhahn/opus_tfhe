@@ -1,0 +1,4 @@
+PBLOCK: pb_slr0 cells=10230 non_engine=0
+PBLOCK: pb_slr1 cells=18487 non_engine=0
+PBLOCK: pb_slr2 cells=10584 non_engine=0
+TIMING: WNS=0.001 TNS=0.000 WHS=0.006 THS=0.000

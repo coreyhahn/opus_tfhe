@@ -1,0 +1,21 @@
+opus_tfhe FULL bitstream: shell + engine on axi_aclk (Stage 3 step 3)
+out_dir        : /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_033_full_genddr_incr029
+git            : 55306ef144e653e217c45e39d2094f4b17246243 (DIRTY: 3 tracked files modified)
+CSR VERSION    : 0x55306ef1   (CSR MAGIC 0x0F7FE001)
+vivado         : 2024.2   part xcvu9p-fsgd2104-2L-e
+finished       : 2026-11-07 00:33:34 MST
+impl recipe    : place -directive SSI_SpreadLogic_high, post-place + post-route phys_opt AggressiveExplore, route -directive AggressiveExplore, incremental from /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_029_full_cycfix_incr028/opus_full_routed.dcp (TimingClosure)
+WNS / TNS      : 0.004 / 0.000 ns
+WHS / THS      : 0.004 / 0.000 ns
+timing met     : YES
+no-clock pins  : 0
+LUT / FF       : 805630 / 739243
+BRAM36 / URAM  : 800.5 / 856
+DSP            : 5022
+engine synth   : bd_opus_0_0_synth_1 (OOC per IP), -keep_equivalent_registers -resource_sharing off
+floorplan      : engine_slr_full.xdc (pb_slr0/1/2; reports/utilization_pblocks.rpt, utilization_slr.rpt)
+xdma rst exc   : 40 pins matched, 0 outside xdma_0
+bit (run dir)  : /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_033_full_genddr_incr029/proj/opus_full.runs/impl_1/bd_wrapper.bit  mtime 2026-11-06 23:29:19 MST
+bit (copy)     : /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_033_full_genddr_incr029/opus_full.bit
+routed dcp     : /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_033_full_genddr_incr029/opus_full_routed.dcp
+ltx            : /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_033_full_genddr_incr029/opus_full.ltx

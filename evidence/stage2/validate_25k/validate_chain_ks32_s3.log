@@ -1,0 +1,410 @@
+$ ref/tfhe_oracle/target/release/tfhe_oracle gen --variant ks32 --seed 3 --count 25000 --lut mod4 --out data/v25k/chain_ks32_s3
+# host grumpy-calf-ctr  date 2026-10-27T10:05:08-06:00  git bfef324
+{
+  "bsk_gen_and_fourier": 0.323781504,
+  "encrypt": 2.885361732,
+  "ks_ms_pbs_all": 41.083590931,
+  "ksk_gen": 0.242726648,
+  "threads": 80,
+  "write": 14.086343166
+}
+gen ks32 seed=3 count=25000 lut=mod4 -> data/v25k/chain_ks32_s3  (total 58.75s)
+$ ref/tfhe_oracle/target/release/tfhe_oracle expect --keys data/v25k/chain_ks32_s3 --lut mod4 --w 5 --out data/v25k/chain_ks32_s3/exp_x5.u8
+# host grumpy-calf-ctr  date 2026-10-27T10:06:07-06:00  git bfef324
+expect: 25000 values -> data/v25k/chain_ks32_s3/exp_x5.u8 sha256 d02053b91cb500fca3c6aebd76ff6ee67389e631db558d42fbbb52328e55e7bc
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/chain_ks32_s3 --arith exact64 --lut mod4 --out data/v25k/chain_ks32_s3/model_exact64.first
+# host grumpy-calf-ctr  date 2026-10-27T10:06:07-06:00  git bfef324
+{
+  "arith": "exact64",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/chain_ks32_s3/lwe_in.u64",
+  "keys": "data/v25k/chain_ks32_s3",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 20.96491755812706,
+    "max_abs": 8372102.0,
+    "mean": -4480.41232,
+    "std": 2046769.9944888833
+  },
+  "ks_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "mod4",
+  "lut_matches_tfhe_rs": true,
+  "ms_implied_log2_pfail_gaussian": -130.78260159803818,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.27162119600922,
+    "max_abs": 21.0,
+    "mean": -0.5176,
+    "std": 4.828654354591444
+  },
+  "ms_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "pbs_bit_equal_to_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mismatching_ciphertexts": 25000
+  },
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 49.0007242199793,
+    "max_abs": 2272442297050565.0,
+    "mean": 3046987693227.251,
+    "std": 563232620194229.5
+  },
+  "pbs_phase_minus_tfhe_rs_phase": {
+    "count": 25000,
+    "log2_std": 49.60294914171641,
+    "max_abs": 3529521290798006.0,
+    "mean": 9922488433053.32,
+    "std": 855018605151005.5
+  },
+  "scale": null,
+  "seconds_prepare_bsk": 0.151141584,
+  "seconds_run": 851.983349564
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/model_exact64.first.pbs.u64 --kind pbs --json data/v25k/chain_ks32_s3/model_exact64.first.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T10:20:27-06:00  git bfef324
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/model_exact64.first.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.0131650845875,
+  "log2_std": 49.0007242199793,
+  "margin_sigma": 511.7430450891075,
+  "max_abs": 2272442297050565.0,
+  "mean": 3046987693227.251,
+  "std": 563232620194229.5,
+  "variant": "ks32"
+}
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/chain_ks32_s3 --arith exact64 --lut id --input data/v25k/chain_ks32_s3/model_exact64.first.pbs.u64 --scale 5 --in-msgs data/v25k/chain_ks32_s3/exp_x5.u8 --out data/v25k/chain_ks32_s3/model_exact64.chain
+# host grumpy-calf-ctr  date 2026-10-27T10:20:28-06:00  git bfef324
+{
+  "arith": "exact64",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/chain_ks32_s3/model_exact64.first.pbs.u64",
+  "keys": "data/v25k/chain_ks32_s3",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 21.037751267832483,
+    "max_abs": 9060858.0,
+    "mean": 14881.71796,
+    "std": 2152752.850374395
+  },
+  "ks_vs_tfhe_rs": null,
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "id",
+  "lut_matches_tfhe_rs": null,
+  "ms_implied_log2_pfail_gaussian": -130.50386034166334,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.2731222089891223,
+    "max_abs": 21.0,
+    "mean": -0.44648,
+    "std": 4.833680811597697
+  },
+  "ms_vs_tfhe_rs": null,
+  "pbs_bit_equal_to_tfhe_rs": null,
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 48.99669096538081,
+    "max_abs": 2482162568833324.0,
+    "mean": 3715411373351.563,
+    "std": 561660224035208.7
+  },
+  "pbs_phase_minus_tfhe_rs_phase": null,
+  "scale": "5",
+  "seconds_prepare_bsk": 0.155317971,
+  "seconds_run": 852.173006684
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/model_exact64.chain.pbs.u64 --kind pbs --expect data/v25k/chain_ks32_s3/exp_x5.u8 --json data/v25k/chain_ks32_s3/model_exact64.chain.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T10:34:46-06:00  git bfef324
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/model_exact64.chain.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.14051903094993,
+  "log2_std": 48.99669096538081,
+  "margin_sigma": 513.1756955850295,
+  "max_abs": 2482162568833324.0,
+  "mean": 3715411373351.563,
+  "std": 561660224035208.7,
+  "variant": "ks32"
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle ms-stats --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/model_exact64.chain.ms.u32 --expect data/v25k/chain_ks32_s3/exp_x5.u8 --json data/v25k/chain_ks32_s3/model_exact64.chain.ms.json
+# host grumpy-calf-ctr  date 2026-10-27T10:34:46-06:00  git bfef324
+{
+  "count": 25000,
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/model_exact64.chain.ms.u32",
+  "log2_pfail_gauss_[-64,64)": -129.6328512606646,
+  "log2_pfail_gauss_continuity_[-64.5,63.5)": -130.50386034166334,
+  "margin_sigma_hi": 13.332795960662166,
+  "margin_sigma_lo": 13.148058896961668,
+  "max": 21,
+  "mean": -0.44648,
+  "min": -18,
+  "std": 4.833680811597697,
+  "unit": "1/(2N) of the torus (2N = 4096); correct iff err in [-64, 64)"
+}
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/chain_ks32_s3 --arith rns:249857,188417,163841:28 --lut mod4 --out data/v25k/chain_ks32_s3/model_rns.first
+# host grumpy-calf-ctr  date 2026-10-27T10:34:47-06:00  git bfef324
+{
+  "arith": "rns[249857,188417,163841]F28 (log2 Q = 52.776)",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/chain_ks32_s3/lwe_in.u64",
+  "keys": "data/v25k/chain_ks32_s3",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 20.96491755812706,
+    "max_abs": 8372102.0,
+    "mean": -4480.41232,
+    "std": 2046769.9944888833
+  },
+  "ks_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "mod4",
+  "lut_matches_tfhe_rs": true,
+  "ms_implied_log2_pfail_gaussian": -130.78260159803818,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.27162119600922,
+    "max_abs": 21.0,
+    "mean": -0.5176,
+    "std": 4.828654354591444
+  },
+  "ms_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "pbs_bit_equal_to_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mismatching_ciphertexts": 25000
+  },
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 49.022195051173114,
+    "max_abs": 2331354509525729.0,
+    "mean": 3299508577146.212,
+    "std": 571677584300774.5
+  },
+  "pbs_phase_minus_tfhe_rs_phase": {
+    "count": 25000,
+    "log2_std": 49.60757303574476,
+    "max_abs": 3664155774824230.0,
+    "mean": 10175009316972.41,
+    "std": 857763369408215.4
+  },
+  "scale": null,
+  "seconds_prepare_bsk": 0.154212215,
+  "seconds_run": 969.562095122
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/model_rns.first.pbs.u64 --kind pbs --json data/v25k/chain_ks32_s3/model_rns.first.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T10:51:04-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/model_rns.first.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.05008982299251,
+  "log2_std": 49.022195051173114,
+  "margin_sigma": 504.18344897019125,
+  "max_abs": 2331354509525729.0,
+  "mean": 3299508577146.212,
+  "std": 571677584300774.5,
+  "variant": "ks32"
+}
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/chain_ks32_s3 --arith rns:249857,188417,163841:28 --lut id --input data/v25k/chain_ks32_s3/model_rns.first.pbs.u64 --scale 5 --in-msgs data/v25k/chain_ks32_s3/exp_x5.u8 --out data/v25k/chain_ks32_s3/model_rns.chain
+# host grumpy-calf-ctr  date 2026-10-27T10:51:05-06:00  git ee8f62e
+{
+  "arith": "rns[249857,188417,163841]F28 (log2 Q = 52.776)",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/chain_ks32_s3/model_rns.first.pbs.u64",
+  "keys": "data/v25k/chain_ks32_s3",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 21.033617418260825,
+    "max_abs": 9837425.0,
+    "mean": -13040.07068,
+    "std": 2146593.254136535
+  },
+  "ks_vs_tfhe_rs": null,
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "id",
+  "lut_matches_tfhe_rs": null,
+  "ms_implied_log2_pfail_gaussian": -129.45589956833354,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.2791667233365054,
+    "max_abs": 20.0,
+    "mean": -0.52068,
+    "std": 4.853975152448945
+  },
+  "ms_vs_tfhe_rs": null,
+  "pbs_bit_equal_to_tfhe_rs": null,
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 49.03113537894681,
+    "max_abs": 2445904838906114.0,
+    "mean": 3683822237071.697,
+    "std": 575231248723719.2
+  },
+  "pbs_phase_minus_tfhe_rs_phase": null,
+  "scale": "5",
+  "seconds_prepare_bsk": 0.157095375,
+  "seconds_run": 1079.148217732
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/model_rns.chain.pbs.u64 --kind pbs --expect data/v25k/chain_ks32_s3/exp_x5.u8 --json data/v25k/chain_ks32_s3/model_rns.chain.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T11:09:09-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/model_rns.chain.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.11928969834953,
+  "log2_std": 49.03113537894681,
+  "margin_sigma": 501.06870374517393,
+  "max_abs": 2445904838906114.0,
+  "mean": 3683822237071.697,
+  "std": 575231248723719.2,
+  "variant": "ks32"
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle ms-stats --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/model_rns.chain.ms.u32 --expect data/v25k/chain_ks32_s3/exp_x5.u8 --json data/v25k/chain_ks32_s3/model_rns.chain.ms.json
+# host grumpy-calf-ctr  date 2026-10-27T11:09:10-06:00  git ee8f62e
+{
+  "count": 25000,
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/model_rns.chain.ms.u32",
+  "log2_pfail_gauss_[-64,64)": -128.33282500923764,
+  "log2_pfail_gauss_continuity_[-64.5,63.5)": -129.45589956833354,
+  "margin_sigma_hi": 13.292338335816941,
+  "margin_sigma_lo": 13.077800772831147,
+  "max": 18,
+  "mean": -0.52068,
+  "min": -20,
+  "std": 4.853975152448945,
+  "unit": "1/(2N) of the torus (2N = 4096); correct iff err in [-64, 64)"
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle scale --input data/v25k/chain_ks32_s3/ref_pbs_out.u64 --w 5 --out data/v25k/chain_ks32_s3/tfhe_x5.u64
+# host grumpy-calf-ctr  date 2026-10-27T11:09:10-06:00  git ee8f62e
+scale x5: 51225000 words -> data/v25k/chain_ks32_s3/tfhe_x5.u64 sha256 5c3e4b21213e9bdc95b326630ccefb611fd2d2ec9f0f7d36fc93b1207646971a
+$ ref/tfhe_oracle/target/release/tfhe_oracle pbs --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/tfhe_x5.u64 --lut id --out data/v25k/chain_ks32_s3/tfhe_chain
+# host grumpy-calf-ctr  date 2026-10-27T11:09:16-06:00  git ee8f62e
+  data/v25k/chain_ks32_s3/tfhe_chain.ks.u32  sha256 93f04467417673c8489d7fcde5a14c62d49d796781691f294c82be7cbfd69fad
+  data/v25k/chain_ks32_s3/tfhe_chain.ms.u32  sha256 c648a84f7b6737e272c9b6136bcf374a17a5846a436f8978c198300101a4925a
+  data/v25k/chain_ks32_s3/tfhe_chain.pbs.u64  sha256 547e6487d9f4d5d38fa96c38df1a8927d4114181bf05079b803296dc7385c03e
+pbs ks32 lut=id count=25000 -> data/v25k/chain_ks32_s3/tfhe_chain.*  (pipeline 49.41s, total 58.78s)
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/tfhe_chain.pbs.u64 --kind pbs --expect data/v25k/chain_ks32_s3/exp_x5.u8 --json data/v25k/chain_ks32_s3/tfhe_chain.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T11:10:15-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/tfhe_chain.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.458445965347224,
+  "log2_std": 49.18461223478113,
+  "margin_sigma": 450.5013956312069,
+  "max_abs": 3094110116847616.0,
+  "mean": -2414230660388.1006,
+  "std": 639799074868272.4,
+  "variant": "ks32"
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle ms-stats --keys data/v25k/chain_ks32_s3 --input data/v25k/chain_ks32_s3/tfhe_chain.ms.u32 --expect data/v25k/chain_ks32_s3/exp_x5.u8 --json data/v25k/chain_ks32_s3/tfhe_chain.ms.json
+# host grumpy-calf-ctr  date 2026-10-27T11:10:16-06:00  git ee8f62e
+{
+  "count": 25000,
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/chain_ks32_s3/tfhe_chain.ms.u32",
+  "log2_pfail_gauss_[-64,64)": -127.80288818664899,
+  "log2_pfail_gauss_continuity_[-64.5,63.5)": -128.9245768604383,
+  "margin_sigma_hi": 13.264726142771513,
+  "margin_sigma_lo": 13.049851172382459,
+  "max": 20,
+  "mean": -0.5226,
+  "min": -20,
+  "std": 4.864224056005934,
+  "unit": "1/(2N) of the torus (2N = 4096); correct iff err in [-64, 64)"
+}

@@ -1,0 +1,654 @@
+{
+ "tool": "sw/pbs_ladder.py",
+ "label": "silicon",
+ "utc": "2026-11-07T08:00:17.875594+00:00",
+ "host": "snoke",
+ "git": "a82b160d55ede75e32315965912842f49a3a14a6",
+ "argv": [
+  "sw/pbs_ladder.py",
+  "--keys",
+  "data/v25k/ks32_s1",
+  "data/v25k/ks32_s2",
+  "data/v25k/ks32_s3",
+  "data/v25k/ks32_s4",
+  "--requests",
+  "750",
+  "--expect-version",
+  "55306ef1"
+ ],
+ "param_set": "PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128",
+ "p_fail": "2^-129.58",
+ "engine_slots": 8,
+ "aclk_mhz": 250.0,
+ "definition": "closed loop, one request of B ciphertexts in flight; throughput = B / latency",
+ "loadavg_start": [
+  15.26904296875,
+  17.89599609375,
+  15.49169921875
+ ],
+ "seeds": [
+  {
+   "seed": 1,
+   "keys": "/home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1",
+   "rows": [
+    {
+     "batch": 1,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4081.0,
+      4242.0,
+      7970.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 245.0,
+     "pbs_per_s_device": 266.9,
+     "pbs_per_s_loop_total": 239.4,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02217263221888,
+     "pass": true
+    },
+    {
+     "batch": 2,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4129.0,
+      5764.0,
+      7473.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 484.4,
+     "pbs_per_s_device": 533.8,
+     "pbs_per_s_loop_total": 471.0,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.020115606535214,
+     "pass": true
+    },
+    {
+     "batch": 4,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4199.5,
+      6754.0,
+      7777.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.8
+     ],
+     "pbs_per_s_host": 952.5,
+     "pbs_per_s_device": 1067.7,
+     "pbs_per_s_loop_total": 911.0,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.03103742687534,
+     "pass": true
+    },
+    {
+     "batch": 8,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4343.0,
+      5881.0,
+      8858.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 1842.0,
+     "pbs_per_s_device": 2135.3,
+     "pbs_per_s_loop_total": 1753.5,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.033502346094906,
+     "pass": true
+    },
+    {
+     "batch": 12,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6339.0,
+      7737.0,
+      10073.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.7,
+      5893.4,
+      6351.1
+     ],
+     "pbs_per_s_host": 1893.0,
+     "pbs_per_s_device": 2036.7,
+     "pbs_per_s_loop_total": 1819.9,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.03209585407829,
+     "pass": true
+    },
+    {
+     "batch": 16,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6468.0,
+      8790.0,
+      9611.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.8,
+      5893.4,
+      7167.2
+     ],
+     "pbs_per_s_host": 2473.7,
+     "pbs_per_s_device": 2715.7,
+     "pbs_per_s_loop_total": 2359.8,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.03248556491125,
+     "pass": true
+    },
+    {
+     "batch": "stream",
+     "count": 12500,
+     "pbs_per_s_host": 3594.1,
+     "pbs_per_s_device": 3614.0,
+     "engine_batch_latency_us_min_med_max": [
+      3745.25,
+      3746.63,
+      5605.72
+     ],
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.03186190322095,
+     "pass": true
+    }
+   ],
+   "ksk_load_ms": 1.972
+  },
+  {
+   "seed": 2,
+   "keys": "/home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2",
+   "rows": [
+    {
+     "batch": 1,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4093.0,
+      4337.0,
+      7439.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 244.3,
+     "pbs_per_s_device": 266.9,
+     "pbs_per_s_loop_total": 238.3,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.016518201647095,
+     "pass": true
+    },
+    {
+     "batch": 2,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4145.0,
+      5753.0,
+      7215.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.4,
+      3747.6
+     ],
+     "pbs_per_s_host": 482.5,
+     "pbs_per_s_device": 533.8,
+     "pbs_per_s_loop_total": 470.7,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.0124338557155,
+     "pass": true
+    },
+    {
+     "batch": 4,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4434.0,
+      6901.0,
+      8525.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 902.1,
+     "pbs_per_s_device": 1067.7,
+     "pbs_per_s_loop_total": 869.3,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.01821638514384,
+     "pass": true
+    },
+    {
+     "batch": 8,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4589.0,
+      10165.0,
+      14219.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.4,
+      3747.7
+     ],
+     "pbs_per_s_host": 1743.3,
+     "pbs_per_s_device": 2135.3,
+     "pbs_per_s_loop_total": 1600.8,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02276600440823,
+     "pass": true
+    },
+    {
+     "batch": 12,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6528.5,
+      7750.0,
+      13291.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.7,
+      5893.2,
+      7492.8
+     ],
+     "pbs_per_s_host": 1838.1,
+     "pbs_per_s_device": 2036.7,
+     "pbs_per_s_loop_total": 1760.5,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02095323383314,
+     "pass": true
+    },
+    {
+     "batch": 16,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6658.0,
+      9801.0,
+      16469.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.8,
+      5893.2,
+      7493.5
+     ],
+     "pbs_per_s_host": 2403.1,
+     "pbs_per_s_device": 2715.7,
+     "pbs_per_s_loop_total": 2280.0,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02063559967885,
+     "pass": true
+    },
+    {
+     "batch": "stream",
+     "count": 12500,
+     "pbs_per_s_host": 3497.3,
+     "pbs_per_s_device": 3530.9,
+     "engine_batch_latency_us_min_med_max": [
+      3745.28,
+      3746.69,
+      5478.3
+     ],
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.023619662229635,
+     "pass": true
+    }
+   ],
+   "ksk_load_ms": 1.971
+  },
+  {
+   "seed": 3,
+   "keys": "/home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3",
+   "rows": [
+    {
+     "batch": 1,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4096.5,
+      4370.0,
+      6871.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 244.1,
+     "pbs_per_s_device": 266.9,
+     "pbs_per_s_loop_total": 238.3,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.06431481655518,
+     "pass": true
+    },
+    {
+     "batch": 2,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4122.0,
+      7019.0,
+      7644.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 485.2,
+     "pbs_per_s_device": 533.8,
+     "pbs_per_s_loop_total": 469.6,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.029192080599984,
+     "pass": true
+    },
+    {
+     "batch": 4,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4190.0,
+      4566.0,
+      6768.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 954.7,
+     "pbs_per_s_device": 1067.7,
+     "pbs_per_s_loop_total": 933.7,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.05196325884464,
+     "pass": true
+    },
+    {
+     "batch": 8,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4311.0,
+      4559.0,
+      6760.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.9
+     ],
+     "pbs_per_s_host": 1855.7,
+     "pbs_per_s_device": 2135.3,
+     "pbs_per_s_loop_total": 1804.9,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02414165475473,
+     "pass": true
+    },
+    {
+     "batch": 12,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6336.0,
+      7364.0,
+      12765.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.8,
+      5893.3,
+      5893.6
+     ],
+     "pbs_per_s_host": 1893.9,
+     "pbs_per_s_device": 2036.7,
+     "pbs_per_s_loop_total": 1803.8,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.04442792912039,
+     "pass": true
+    },
+    {
+     "batch": 16,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6451.5,
+      7262.0,
+      15898.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.8,
+      5893.2,
+      5893.6
+     ],
+     "pbs_per_s_host": 2480.0,
+     "pbs_per_s_device": 2715.7,
+     "pbs_per_s_loop_total": 2386.9,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.04430330732162,
+     "pass": true
+    },
+    {
+     "batch": "stream",
+     "count": 12500,
+     "pbs_per_s_host": 3607.1,
+     "pbs_per_s_device": 3624.7,
+     "engine_batch_latency_us_min_med_max": [
+      3745.38,
+      3746.65,
+      5621.78
+     ],
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.0448086662612,
+     "pass": true
+    }
+   ],
+   "ksk_load_ms": 1.972
+  },
+  {
+   "seed": 4,
+   "keys": "/home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4",
+   "rows": [
+    {
+     "batch": 1,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4160.0,
+      6770.0,
+      18910.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.6,
+      3747.7
+     ],
+     "pbs_per_s_host": 240.4,
+     "pbs_per_s_device": 266.9,
+     "pbs_per_s_loop_total": 228.9,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 48.98631462925821,
+     "pass": true
+    },
+    {
+     "batch": 2,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4176.5,
+      7288.0,
+      11463.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.6
+     ],
+     "pbs_per_s_host": 478.9,
+     "pbs_per_s_device": 533.8,
+     "pbs_per_s_loop_total": 448.8,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02227364110025,
+     "pass": true
+    },
+    {
+     "batch": 4,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4197.0,
+      7583.0,
+      8446.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 953.1,
+     "pbs_per_s_device": 1067.7,
+     "pbs_per_s_loop_total": 889.7,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02830296333943,
+     "pass": true
+    },
+    {
+     "batch": 8,
+     "requests": 750,
+     "engine_batches_per_request": 1,
+     "host_latency_us_med_p99_max": [
+      4339.5,
+      7875.0,
+      11972.0
+     ],
+     "device_latency_us_med_p99_max": [
+      3746.5,
+      3747.5,
+      3747.7
+     ],
+     "pbs_per_s_host": 1843.5,
+     "pbs_per_s_device": 2135.3,
+     "pbs_per_s_loop_total": 1688.1,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.038201091497875,
+     "pass": true
+    },
+    {
+     "batch": 12,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6343.0,
+      8900.0,
+      12717.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.8,
+      5893.3,
+      7242.0
+     ],
+     "pbs_per_s_host": 1891.8,
+     "pbs_per_s_device": 2036.7,
+     "pbs_per_s_loop_total": 1812.3,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.03438259884726,
+     "pass": true
+    },
+    {
+     "batch": 16,
+     "requests": 750,
+     "engine_batches_per_request": 2,
+     "host_latency_us_med_p99_max": [
+      6478.0,
+      8444.0,
+      10058.0
+     ],
+     "device_latency_us_med_p99_max": [
+      5891.7,
+      5893.5,
+      7492.6
+     ],
+     "pbs_per_s_host": 2469.9,
+     "pbs_per_s_device": 2715.7,
+     "pbs_per_s_loop_total": 2307.4,
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02194712822573,
+     "pass": true
+    },
+    {
+     "batch": "stream",
+     "count": 12500,
+     "pbs_per_s_host": 3510.2,
+     "pbs_per_s_device": 3558.9,
+     "engine_batch_latency_us_min_med_max": [
+      3745.46,
+      3746.66,
+      5603.34
+     ],
+     "failures": 0,
+     "mismatched_ct": 0,
+     "log2_std": 49.02148932539983,
+     "pass": true
+    }
+   ],
+   "ksk_load_ms": 1.972
+  }
+ ],
+ "pass": true,
+ "version": "55306ef1",
+ "loadavg_end_device": [
+  18.7333984375,
+  18.6845703125,
+  16.146484375
+ ]
+}

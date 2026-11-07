@@ -1,0 +1,35 @@
+MAGIC=0f7fe001 VERSION=55306ef1 CALIB=f
+[OK ] run0 seed=0x1 ch0: W 152.5 MB/s, R 281.4 MB/s, errors=0
+[OK ] run0 seed=0x1 ch1: W 159.1 MB/s, R 277.0 MB/s, errors=0
+[OK ] run0 seed=0x1 ch2: W 164.7 MB/s, R 239.1 MB/s, errors=0
+[OK ] run0 seed=0x1 ch3: W 158.2 MB/s, R 267.9 MB/s, errors=0
+[OK ] run0 seed=0x2 ch0: W 159.8 MB/s, R 276.7 MB/s, errors=0
+[OK ] run0 seed=0x2 ch1: W 163.0 MB/s, R 271.0 MB/s, errors=0
+[OK ] run0 seed=0x2 ch2: W 160.6 MB/s, R 274.2 MB/s, errors=0
+[OK ] run0 seed=0x2 ch3: W 163.7 MB/s, R 240.1 MB/s, errors=0
+[OK ] run0 seed=0x3 ch0: W 164.1 MB/s, R 268.3 MB/s, errors=0
+[OK ] run0 seed=0x3 ch1: W 163.8 MB/s, R 268.6 MB/s, errors=0
+[OK ] run0 seed=0x3 ch2: W 160.2 MB/s, R 264.4 MB/s, errors=0
+[OK ] run0 seed=0x3 ch3: W 158.0 MB/s, R 277.1 MB/s, errors=0
+[OK ] run0 seed=0x4 ch0: W 161.0 MB/s, R 268.1 MB/s, errors=0
+[OK ] run0 seed=0x4 ch1: W 164.8 MB/s, R 275.5 MB/s, errors=0
+[OK ] run0 seed=0x4 ch2: W 165.2 MB/s, R 275.7 MB/s, errors=0
+[OK ] run0 seed=0x4 ch3: W 164.5 MB/s, R 277.8 MB/s, errors=0
+[OK ] run1 seed=0x1 ch0: W 156.7 MB/s, R 275.8 MB/s, errors=0
+[OK ] run1 seed=0x1 ch1: W 157.7 MB/s, R 251.1 MB/s, errors=0
+[OK ] run1 seed=0x1 ch2: W 154.3 MB/s, R 266.6 MB/s, errors=0
+[OK ] run1 seed=0x1 ch3: W 164.4 MB/s, R 272.1 MB/s, errors=0
+[OK ] run1 seed=0x2 ch0: W 164.4 MB/s, R 275.7 MB/s, errors=0
+[OK ] run1 seed=0x2 ch1: W 160.1 MB/s, R 274.9 MB/s, errors=0
+[OK ] run1 seed=0x2 ch2: W 158.5 MB/s, R 276.5 MB/s, errors=0
+[OK ] run1 seed=0x2 ch3: W 163.8 MB/s, R 269.2 MB/s, errors=0
+[OK ] run1 seed=0x3 ch0: W 158.5 MB/s, R 273.7 MB/s, errors=0
+[OK ] run1 seed=0x3 ch1: W 157.5 MB/s, R 235.4 MB/s, errors=0
+[OK ] run1 seed=0x3 ch2: W 164.7 MB/s, R 274.0 MB/s, errors=0
+[OK ] run1 seed=0x3 ch3: W 163.7 MB/s, R 275.0 MB/s, errors=0
+[OK ] run1 seed=0x4 ch0: W 161.2 MB/s, R 265.2 MB/s, errors=0
+[OK ] run1 seed=0x4 ch1: W 163.5 MB/s, R 272.9 MB/s, errors=0
+[OK ] run1 seed=0x4 ch2: W 156.5 MB/s, R 275.6 MB/s, errors=0
+[OK ] run1 seed=0x4 ch3: W 162.7 MB/s, R 264.4 MB/s, errors=0
+PASS
+evidence: evidence/stage3/silicon_033/ddr_test_20261107_005825.json

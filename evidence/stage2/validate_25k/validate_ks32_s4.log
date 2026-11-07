@@ -1,0 +1,217 @@
+$ ref/tfhe_oracle/target/release/tfhe_oracle gen --variant ks32 --seed 4 --count 25000 --lut sq3 --out data/v25k/ks32_s4
+# host grumpy-calf-ctr  date 2026-10-27T11:10:16-06:00  git ee8f62e
+{
+  "bsk_gen_and_fourier": 0.319234423,
+  "encrypt": 2.884541098,
+  "ks_ms_pbs_all": 51.796169985,
+  "ksk_gen": 0.243781009,
+  "threads": 80,
+  "write": 13.682088507
+}
+gen ks32 seed=4 count=25000 lut=sq3 -> data/v25k/ks32_s4  (total 69.03s)
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/ks32_s4 --arith exact64 --lut sq3 --out data/v25k/ks32_s4/model_exact64
+# host grumpy-calf-ctr  date 2026-10-27T11:11:25-06:00  git ee8f62e
+{
+  "arith": "exact64",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/ks32_s4/lwe_in.u64",
+  "keys": "data/v25k/ks32_s4",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 20.98419347473327,
+    "max_abs": 8263548.0,
+    "mean": -4834.57824,
+    "std": 2074300.4936866337
+  },
+  "ks_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "sq3",
+  "lut_matches_tfhe_rs": true,
+  "ms_implied_log2_pfail_gaussian": -131.66492925424916,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.2665995163576893,
+    "max_abs": 20.0,
+    "mean": -0.54164,
+    "std": 4.811876170111923
+  },
+  "ms_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "pbs_bit_equal_to_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mismatching_ciphertexts": 25000
+  },
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 49.00933401969563,
+    "max_abs": 2379610409336734.0,
+    "mean": 1157686721917.5583,
+    "std": 566603962557967.6
+  },
+  "pbs_phase_minus_tfhe_rs_phase": {
+    "count": 25000,
+    "log2_std": 49.617660875276535,
+    "max_abs": 3575787724166148.0,
+    "mean": 24957351589864.008,
+    "std": 863782175862911.5
+  },
+  "scale": null,
+  "seconds_prepare_bsk": 0.147617982,
+  "seconds_run": 889.514718812
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/ks32_s4 --input data/v25k/ks32_s4/model_exact64.pbs.u64 --kind pbs --json data/v25k/ks32_s4/model_exact64.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T11:26:22-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/ks32_s4/model_exact64.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.07964681763116,
+  "log2_std": 49.00933401969563,
+  "margin_sigma": 508.6981299080197,
+  "max_abs": 2379610409336734.0,
+  "mean": 1157686721917.5583,
+  "std": 566603962557967.6,
+  "variant": "ks32"
+}
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/ks32_s4 --arith rns:249857,188417,163841:28 --lut sq3 --out data/v25k/ks32_s4/model_rns
+# host grumpy-calf-ctr  date 2026-10-27T11:26:23-06:00  git ee8f62e
+{
+  "arith": "rns[249857,188417,163841]F28 (log2 Q = 52.776)",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/ks32_s4/lwe_in.u64",
+  "keys": "data/v25k/ks32_s4",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 20.98419347473327,
+    "max_abs": 8263548.0,
+    "mean": -4834.57824,
+    "std": 2074300.4936866337
+  },
+  "ks_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "sq3",
+  "lut_matches_tfhe_rs": true,
+  "ms_implied_log2_pfail_gaussian": -131.66492925424916,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.2665995163576893,
+    "max_abs": 20.0,
+    "mean": -0.54164,
+    "std": 4.811876170111923
+  },
+  "ms_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "pbs_bit_equal_to_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mismatching_ciphertexts": 25000
+  },
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 49.02481565087233,
+    "max_abs": 2309389179630149.0,
+    "mean": -2004407930717.062,
+    "std": 572716958210120.0
+  },
+  "pbs_phase_minus_tfhe_rs_phase": {
+    "count": 25000,
+    "log2_std": 49.61567880507996,
+    "max_abs": 3462912698637094.0,
+    "mean": 21795256937229.31,
+    "std": 862596269406879.0
+  },
+  "scale": null,
+  "seconds_prepare_bsk": 0.150441275,
+  "seconds_run": 971.391542226
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/ks32_s4 --input data/v25k/ks32_s4/model_rns.pbs.u64 --kind pbs --json data/v25k/ks32_s4/model_rns.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T11:42:41-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/ks32_s4/model_rns.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.03643274073184,
+  "log2_std": 49.02481565087233,
+  "margin_sigma": 503.2684505318332,
+  "max_abs": 2309389179630149.0,
+  "mean": -2004407930717.062,
+  "std": 572716958210120.0,
+  "variant": "ks32"
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/ks32_s4 --input data/v25k/ks32_s4/ref_pbs_out.u64 --kind pbs --json data/v25k/ks32_s4/tfhe.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T11:42:42-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/ks32_s4/ref_pbs_out.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.147494275236525,
+  "log2_std": 49.20516552711422,
+  "margin_sigma": 444.12884792943726,
+  "max_abs": 2494192562733056.0,
+  "mean": -23799664867946.363,
+  "std": 648979181369244.2,
+  "variant": "ks32"
+}

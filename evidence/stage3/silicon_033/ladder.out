@@ -1,0 +1,178 @@
+# pbs_ladder silicon host snoke git a82b160d55ede75e32315965912842f49a3a14a6 date 2026-11-07T08:00:17.875594+00:00
+$ sw/pbs_ladder.py --keys data/v25k/ks32_s1 data/v25k/ks32_s2 data/v25k/ks32_s3 data/v25k/ks32_s4 --requests 750 --expect-version 55306ef1
+prep: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_prep_P5_L184 is current (stamp matches keys + pack_ddr; images by /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_model/target-ctr/release/dump_engine on grumpy-calf-ctr)
+prep: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_prep_P5_L184 is current (stamp matches keys + pack_ddr; images by /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_model/target/release/dump_engine on snoke)
+prep: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_prep_P5_L184 is current (stamp matches keys + pack_ddr; images by /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_model/target/release/dump_engine on snoke)
+prep: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_prep_P5_L184 is current (stamp matches keys + pack_ddr; images by /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_model/target/release/dump_engine on snoke)
+MAGIC=0f7fe001 VERSION=55306ef1 CALIB=f
+STATUS=00000003 DONE_CNT=12504
+== seed 1: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1
+ch0: 18800640 bytes at channel offset 0x100000 (900 MB/s), read back bit-exact
+ch1: 18800640 bytes at channel offset 0x200000 (3061 MB/s), read back bit-exact
+ch3: 18800640 bytes at channel offset 0x300000 (1192 MB/s), read back bit-exact
+ch2: 31457280 bytes at channel offset 0x400000 (1559 MB/s), read back bit-exact
+KSK load: 1.97 ms host wall (STATUS 00000003)
+LUT: 192 words into io +0x100000; keys loaded in 0.61 s
+  batch  1: latency host med 4081.0 us (p99 4242.0, max 7970.0), device med 3746.5 us; PBS/s host 245.0, device 266.9, loop 239.4  [silicon]
+  batch  2: latency host med 4129.0 us (p99 5764.0, max 7473.0), device med 3746.5 us; PBS/s host 484.4, device 533.8, loop 471.0  [silicon]
+  batch  4: latency host med 4199.5 us (p99 6754.0, max 7777.0), device med 3746.5 us; PBS/s host 952.5, device 1067.7, loop 911.0  [silicon]
+  batch  8: latency host med 4343.0 us (p99 5881.0, max 8858.0), device med 3746.5 us; PBS/s host 1842.0, device 2135.3, loop 1753.5  [silicon]
+  batch 12: latency host med 6339.0 us (p99 7737.0, max 10073.0), device med 5891.7 us; PBS/s host 1893.0, device 2036.7, loop 1819.9  [silicon]
+  batch 16: latency host med 6468.0 us (p99 8790.0, max 9611.0), device med 5891.8 us; PBS/s host 2473.7, device 2715.7, loop 2359.8  [silicon]
+  stream 12500: PBS/s host 3594.1, device 3614.0, engine-batch latency min/med/max [3745.25, 3746.63, 5605.72] us  [silicon]
+== seed 2: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2
+ch0: 18800640 bytes at channel offset 0x100000 (3087 MB/s), read back bit-exact
+ch1: 18800640 bytes at channel offset 0x200000 (3132 MB/s), read back bit-exact
+ch3: 18800640 bytes at channel offset 0x300000 (2826 MB/s), read back bit-exact
+ch2: 31457280 bytes at channel offset 0x400000 (3247 MB/s), read back bit-exact
+KSK load: 1.97 ms host wall (STATUS 00000003)
+LUT: 192 words into io +0x100000; keys loaded in 0.50 s
+  batch  1: latency host med 4093.0 us (p99 4337.0, max 7439.0), device med 3746.5 us; PBS/s host 244.3, device 266.9, loop 238.3  [silicon]
+  batch  2: latency host med 4145.0 us (p99 5753.0, max 7215.0), device med 3746.5 us; PBS/s host 482.5, device 533.8, loop 470.7  [silicon]
+  batch  4: latency host med 4434.0 us (p99 6901.0, max 8525.0), device med 3746.5 us; PBS/s host 902.1, device 1067.7, loop 869.3  [silicon]
+  batch  8: latency host med 4589.0 us (p99 10165.0, max 14219.0), device med 3746.5 us; PBS/s host 1743.3, device 2135.3, loop 1600.8  [silicon]
+  batch 12: latency host med 6528.5 us (p99 7750.0, max 13291.0), device med 5891.7 us; PBS/s host 1838.1, device 2036.7, loop 1760.5  [silicon]
+  batch 16: latency host med 6658.0 us (p99 9801.0, max 16469.0), device med 5891.8 us; PBS/s host 2403.1, device 2715.7, loop 2280.0  [silicon]
+  stream 12500: PBS/s host 3497.3, device 3530.9, engine-batch latency min/med/max [3745.28, 3746.69, 5478.3] us  [silicon]
+== seed 3: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3
+ch0: 18800640 bytes at channel offset 0x100000 (3153 MB/s), read back bit-exact
+ch1: 18800640 bytes at channel offset 0x200000 (3095 MB/s), read back bit-exact
+ch3: 18800640 bytes at channel offset 0x300000 (3103 MB/s), read back bit-exact
+ch2: 31457280 bytes at channel offset 0x400000 (3131 MB/s), read back bit-exact
+KSK load: 1.97 ms host wall (STATUS 00000003)
+LUT: 192 words into io +0x100000; keys loaded in 0.48 s
+  batch  1: latency host med 4096.5 us (p99 4370.0, max 6871.0), device med 3746.5 us; PBS/s host 244.1, device 266.9, loop 238.3  [silicon]
+  batch  2: latency host med 4122.0 us (p99 7019.0, max 7644.0), device med 3746.5 us; PBS/s host 485.2, device 533.8, loop 469.6  [silicon]
+  batch  4: latency host med 4190.0 us (p99 4566.0, max 6768.0), device med 3746.5 us; PBS/s host 954.7, device 1067.7, loop 933.7  [silicon]
+  batch  8: latency host med 4311.0 us (p99 4559.0, max 6760.0), device med 3746.5 us; PBS/s host 1855.7, device 2135.3, loop 1804.9  [silicon]
+  batch 12: latency host med 6336.0 us (p99 7364.0, max 12765.0), device med 5891.8 us; PBS/s host 1893.9, device 2036.7, loop 1803.8  [silicon]
+  batch 16: latency host med 6451.5 us (p99 7262.0, max 15898.0), device med 5891.8 us; PBS/s host 2480.0, device 2715.7, loop 2386.9  [silicon]
+  stream 12500: PBS/s host 3607.1, device 3624.7, engine-batch latency min/med/max [3745.38, 3746.65, 5621.78] us  [silicon]
+== seed 4: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4
+ch0: 18800640 bytes at channel offset 0x100000 (3058 MB/s), read back bit-exact
+ch1: 18800640 bytes at channel offset 0x200000 (2735 MB/s), read back bit-exact
+ch3: 18800640 bytes at channel offset 0x300000 (2206 MB/s), read back bit-exact
+ch2: 31457280 bytes at channel offset 0x400000 (2373 MB/s), read back bit-exact
+KSK load: 1.97 ms host wall (STATUS 00000003)
+LUT: 192 words into io +0x100000; keys loaded in 0.56 s
+  batch  1: latency host med 4160.0 us (p99 6770.0, max 18910.0), device med 3746.5 us; PBS/s host 240.4, device 266.9, loop 228.9  [silicon]
+  batch  2: latency host med 4176.5 us (p99 7288.0, max 11463.0), device med 3746.5 us; PBS/s host 478.9, device 533.8, loop 448.8  [silicon]
+  batch  4: latency host med 4197.0 us (p99 7583.0, max 8446.0), device med 3746.5 us; PBS/s host 953.1, device 1067.7, loop 889.7  [silicon]
+  batch  8: latency host med 4339.5 us (p99 7875.0, max 11972.0), device med 3746.5 us; PBS/s host 1843.5, device 2135.3, loop 1688.1  [silicon]
+  batch 12: latency host med 6343.0 us (p99 8900.0, max 12717.0), device med 5891.8 us; PBS/s host 1891.8, device 2036.7, loop 1812.3  [silicon]
+  batch 16: latency host med 6478.0 us (p99 8444.0, max 10058.0), device med 5891.7 us; PBS/s host 2469.9, device 2715.7, loop 2307.4  [silicon]
+  stream 12500: PBS/s host 3510.2, device 3558.9, engine-batch latency min/med/max [3745.46, 3746.66, 5603.34] us  [silicon]
+check seed dir ks32_s1 batch 1:
+  bit-exact vs model_rns.pbs.u64: 750/750 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b1.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b1.dec.json
+  tfhe-rs decrypt: 750 ct, failures 0, log2_std 49.02
+check seed dir ks32_s1 batch 2:
+  bit-exact vs model_rns.pbs.u64: 1500/1500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b2.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b2.dec.json
+  tfhe-rs decrypt: 1500 ct, failures 0, log2_std 49.02
+check seed dir ks32_s1 batch 4:
+  bit-exact vs model_rns.pbs.u64: 3000/3000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b4.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b4.dec.json
+  tfhe-rs decrypt: 3000 ct, failures 0, log2_std 49.03
+check seed dir ks32_s1 batch 8:
+  bit-exact vs model_rns.pbs.u64: 6000/6000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b8.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b8.dec.json
+  tfhe-rs decrypt: 6000 ct, failures 0, log2_std 49.03
+check seed dir ks32_s1 batch 12:
+  bit-exact vs model_rns.pbs.u64: 9000/9000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b12.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b12.dec.json
+  tfhe-rs decrypt: 9000 ct, failures 0, log2_std 49.03
+check seed dir ks32_s1 batch 16:
+  bit-exact vs model_rns.pbs.u64: 12000/12000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b16.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_b16.dec.json
+  tfhe-rs decrypt: 12000 ct, failures 0, log2_std 49.03
+check seed dir ks32_s1 batch stream:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_stream.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s1/pbs_ladder/20261107_010017/ladder_s1_stream.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.03
+check seed dir ks32_s2 batch 1:
+  bit-exact vs model_rns.pbs.u64: 750/750 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b1.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b1.dec.json
+  tfhe-rs decrypt: 750 ct, failures 0, log2_std 49.02
+check seed dir ks32_s2 batch 2:
+  bit-exact vs model_rns.pbs.u64: 1500/1500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b2.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b2.dec.json
+  tfhe-rs decrypt: 1500 ct, failures 0, log2_std 49.01
+check seed dir ks32_s2 batch 4:
+  bit-exact vs model_rns.pbs.u64: 3000/3000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b4.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b4.dec.json
+  tfhe-rs decrypt: 3000 ct, failures 0, log2_std 49.02
+check seed dir ks32_s2 batch 8:
+  bit-exact vs model_rns.pbs.u64: 6000/6000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b8.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b8.dec.json
+  tfhe-rs decrypt: 6000 ct, failures 0, log2_std 49.02
+check seed dir ks32_s2 batch 12:
+  bit-exact vs model_rns.pbs.u64: 9000/9000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b12.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b12.dec.json
+  tfhe-rs decrypt: 9000 ct, failures 0, log2_std 49.02
+check seed dir ks32_s2 batch 16:
+  bit-exact vs model_rns.pbs.u64: 12000/12000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b16.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_b16.dec.json
+  tfhe-rs decrypt: 12000 ct, failures 0, log2_std 49.02
+check seed dir ks32_s2 batch stream:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_stream.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_ladder/20261107_010017/ladder_s2_stream.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+check seed dir ks32_s3 batch 1:
+  bit-exact vs model_rns.pbs.u64: 750/750 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b1.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b1.dec.json
+  tfhe-rs decrypt: 750 ct, failures 0, log2_std 49.06
+check seed dir ks32_s3 batch 2:
+  bit-exact vs model_rns.pbs.u64: 1500/1500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b2.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b2.dec.json
+  tfhe-rs decrypt: 1500 ct, failures 0, log2_std 49.03
+check seed dir ks32_s3 batch 4:
+  bit-exact vs model_rns.pbs.u64: 3000/3000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b4.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b4.dec.json
+  tfhe-rs decrypt: 3000 ct, failures 0, log2_std 49.05
+check seed dir ks32_s3 batch 8:
+  bit-exact vs model_rns.pbs.u64: 6000/6000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b8.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b8.dec.json
+  tfhe-rs decrypt: 6000 ct, failures 0, log2_std 49.02
+check seed dir ks32_s3 batch 12:
+  bit-exact vs model_rns.pbs.u64: 9000/9000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b12.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b12.dec.json
+  tfhe-rs decrypt: 9000 ct, failures 0, log2_std 49.04
+check seed dir ks32_s3 batch 16:
+  bit-exact vs model_rns.pbs.u64: 12000/12000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b16.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_b16.dec.json
+  tfhe-rs decrypt: 12000 ct, failures 0, log2_std 49.04
+check seed dir ks32_s3 batch stream:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_stream.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s3/pbs_ladder/20261107_010017/ladder_s3_stream.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.04
+check seed dir ks32_s4 batch 1:
+  bit-exact vs model_rns.pbs.u64: 750/750 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b1.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b1.dec.json
+  tfhe-rs decrypt: 750 ct, failures 0, log2_std 48.99
+check seed dir ks32_s4 batch 2:
+  bit-exact vs model_rns.pbs.u64: 1500/1500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b2.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b2.dec.json
+  tfhe-rs decrypt: 1500 ct, failures 0, log2_std 49.02
+check seed dir ks32_s4 batch 4:
+  bit-exact vs model_rns.pbs.u64: 3000/3000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b4.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b4.dec.json
+  tfhe-rs decrypt: 3000 ct, failures 0, log2_std 49.03
+check seed dir ks32_s4 batch 8:
+  bit-exact vs model_rns.pbs.u64: 6000/6000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b8.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b8.dec.json
+  tfhe-rs decrypt: 6000 ct, failures 0, log2_std 49.04
+check seed dir ks32_s4 batch 12:
+  bit-exact vs model_rns.pbs.u64: 9000/9000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b12.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b12.dec.json
+  tfhe-rs decrypt: 9000 ct, failures 0, log2_std 49.03
+check seed dir ks32_s4 batch 16:
+  bit-exact vs model_rns.pbs.u64: 12000/12000 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b16.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_b16.dec.json
+  tfhe-rs decrypt: 12000 ct, failures 0, log2_std 49.02
+check seed dir ks32_s4 batch stream:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_stream.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s4/pbs_ladder/20261107_010017/ladder_s4_stream.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+PASS
+evidence: /home/cah/r2d2/code/fpga/opus_tfhe/evidence/stage4/ladder/ladder_20261107_010017_s1_2_3_4.json /home/cah/r2d2/code/fpga/opus_tfhe/evidence/stage4/ladder/ladder_20261107_010017_s1_2_3_4.log

@@ -1,0 +1,5 @@
+`verilator_config
+// Lint waivers for the shared Xilinx XPM models only (verilator_lib is not ours to edit): -Wall
+// flags an unsized replication in xpm_memory and '<=' in combinational blocks of xpm_fifo.
+lint_off -rule WIDTHCONCAT -file "*/verilator_lib/xpm/*"
+lint_off -rule COMBDLY -file "*/verilator_lib/xpm/*"

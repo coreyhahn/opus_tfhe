@@ -1,0 +1,65 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Wed Nov  4 02:44:01 2026
+| Host              : snoke running 64-bit Ubuntu 24.04.5 LTS
+| Command           : report_timing_summary -max_paths 20 -file /home/cah/r2d2/code/fpga/opus_tfhe/synth/out_build_029_full_cycfix_incr028/reports/timing_summary.rpt
+| Design            : bd_wrapper
+| Device            : xcvu9p-fsgd2104
+| Speed File        : -2L  PRODUCTION 1.28 03-30-2022
+| Design State      : Physopt postRoute
+| Temperature Grade : E
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                                                                          Violations  
+---------  ----------------  -----------------------------------------------------------------------------------  ----------  
+TIMING-54  Critical Warning  Scoped false path, clock group or max delay datapath only constraint between clocks  1           
+LUTAR-1    Warning           LUT drives async reset alert                                                         16          
+TIMING-9   Warning           Unknown CDC Logic                                                                    1           
+TIMING-18  Warning           Missing input or output delay                                                        5           
+XDCB-5     Warning           Runtime inefficient way to find pin objects                                          2           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+      0.006        0.000                      0              2420826        0.010        0.000                      0              2417596        0.000        0.000                       0                936007  
+
+
+All user specified timing constraints are met.
+All user specified timing constraints are met.

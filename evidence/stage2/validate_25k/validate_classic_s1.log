@@ -1,0 +1,217 @@
+$ ref/tfhe_oracle/target/release/tfhe_oracle gen --variant classic --seed 1 --count 25000 --lut sq3 --out data/v25k/classic_s1
+# host grumpy-calf-ctr  date 2026-10-27T12:45:53-06:00  git ee8f62e
+{
+  "bsk_gen_and_fourier": 0.324724757,
+  "encrypt": 2.884626076,
+  "ks_ms_pbs_all": 44.283449232,
+  "ksk_gen": 0.422855756,
+  "threads": 80,
+  "write": 15.486057104
+}
+gen classic seed=1 count=25000 lut=sq3 -> data/v25k/classic_s1  (total 63.58s)
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/classic_s1 --arith exact64 --lut sq3 --out data/v25k/classic_s1/model_exact64
+# host grumpy-calf-ctr  date 2026-10-27T12:46:57-06:00  git ee8f62e
+{
+  "arith": "exact64",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/classic_s1/lwe_in.u64",
+  "keys": "data/v25k/classic_s1",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 52.9845230565521,
+    "max_abs": 4.062544651084829e+16,
+    "mean": 7839745700742.94,
+    "std": 8911088276556862.0
+  },
+  "ks_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "sq3",
+  "lut_matches_tfhe_rs": true,
+  "ms_implied_log2_pfail_gaussian": -133.78140240619007,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.2548496515585836,
+    "max_abs": 21.0,
+    "mean": -0.50752,
+    "std": 4.772845550799471
+  },
+  "ms_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "pbs_bit_equal_to_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mismatching_ciphertexts": 25000
+  },
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 49.01807142317857,
+    "max_abs": 2457733324138727.0,
+    "mean": -4238684675679.2217,
+    "std": 570045902070057.6
+  },
+  "pbs_phase_minus_tfhe_rs_phase": {
+    "count": 25000,
+    "log2_std": 49.62267625179117,
+    "max_abs": 4348127615388909.0,
+    "mean": -9572686598215.932,
+    "std": 866790248708491.0
+  },
+  "scale": null,
+  "seconds_prepare_bsk": 0.15206753,
+  "seconds_run": 890.549443562
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/classic_s1 --input data/v25k/classic_s1/model_exact64.pbs.u64 --kind pbs --json data/v25k/classic_s1/model_exact64.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T13:01:56-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/classic_s1/model_exact64.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.12624980817705,
+  "log2_std": 49.01807142317857,
+  "margin_sigma": 505.6266084977289,
+  "max_abs": 2457733324138727.0,
+  "mean": -4238684675679.2217,
+  "std": 570045902070057.6,
+  "variant": "classic"
+}
+$ ref/tfhe_model/target/release/tfhe_model run --keys data/v25k/classic_s1 --arith rns:249857,188417,163841:28 --lut sq3 --out data/v25k/classic_s1/model_rns
+# host grumpy-calf-ctr  date 2026-10-27T13:01:57-06:00  git ee8f62e
+{
+  "arith": "rns[249857,188417,163841]F28 (log2 Q = 52.776)",
+  "count": 25000,
+  "decrypt_failures_model_keys": 0,
+  "failed_indices": [],
+  "input": "data/v25k/classic_s1/lwe_in.u64",
+  "keys": "data/v25k/classic_s1",
+  "ks_phase_error_mod_2^w": {
+    "count": 25000,
+    "log2_std": 52.9845230565521,
+    "max_abs": 4.062544651084829e+16,
+    "mean": 7839745700742.94,
+    "std": 8911088276556862.0
+  },
+  "ks_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "ksk_stored_level_for": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "lut": "sq3",
+  "lut_matches_tfhe_rs": true,
+  "ms_implied_log2_pfail_gaussian": -133.78140240619007,
+  "ms_phase_error_units_of_1/2N": {
+    "count": 25000,
+    "log2_std": 2.2548496515585836,
+    "max_abs": 21.0,
+    "mean": -0.50752,
+    "std": 4.772845550799471
+  },
+  "ms_vs_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [],
+    "mismatching_ciphertexts": 0
+  },
+  "pbs_bit_equal_to_tfhe_rs": {
+    "compared": 25000,
+    "first_mismatches": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mismatching_ciphertexts": 25000
+  },
+  "pbs_output_error_mod_2^64": {
+    "count": 25000,
+    "log2_std": 49.05307327594189,
+    "max_abs": 2275717397549928.0,
+    "mean": -7337604501089.321,
+    "std": 584045168460091.2
+  },
+  "pbs_phase_minus_tfhe_rs_phase": {
+    "count": 25000,
+    "log2_std": 49.632955009087674,
+    "max_abs": 3476433018475099.0,
+    "mean": -12671606423626.05,
+    "std": 872987913957019.5
+  },
+  "scale": null,
+  "seconds_prepare_bsk": 0.153120564,
+  "seconds_run": 1009.234925514
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/classic_s1 --input data/v25k/classic_s1/model_rns.pbs.u64 --kind pbs --json data/v25k/classic_s1/model_rns.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T13:18:54-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/classic_s1/model_rns.pbs.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.015242835758436,
+  "log2_std": 49.05307327594189,
+  "margin_sigma": 493.5069952066678,
+  "max_abs": 2275717397549928.0,
+  "mean": -7337604501089.321,
+  "std": 584045168460091.2,
+  "variant": "classic"
+}
+$ ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys data/v25k/classic_s1 --input data/v25k/classic_s1/ref_pbs_out.u64 --kind pbs --json data/v25k/classic_s1/tfhe.dec.json
+# host grumpy-calf-ctr  date 2026-10-27T13:18:54-06:00  git ee8f62e
+{
+  "count": 25000,
+  "decision_bound": 2.8823037615171174e+17,
+  "error_unit": "2^64 modulus units",
+  "failure_list": [],
+  "failures": 0,
+  "input": "data/v25k/classic_s1/ref_pbs_out.u64",
+  "kind": "pbs",
+  "log2_max_abs": 51.23225877073289,
+  "log2_std": 49.20710015124215,
+  "margin_sigma": 443.5336794991686,
+  "max_abs": 2645127651917824.0,
+  "mean": 5334001922536.64,
+  "std": 649850032757776.2,
+  "variant": "classic"
+}

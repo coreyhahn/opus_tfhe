@@ -1,0 +1,12 @@
+06:56:06 CSR MAGIC 0x0f7fe001 VERSION 0x7994da9f
+06:56:06 port /dev/ttyUSB1 (usb-Xilinx_CB-U1-AEBE_21440289J04F-if01-port0)
+06:56:09    115200 listen     0 B b''
+06:56:12      9600 listen     0 B b''
+06:56:12 port /dev/ttyUSB2 (usb-Xilinx_CB-U1-AEBE_21440289J04F-if02-port0)
+06:56:15    115200 listen     0 B b''
+06:56:18      9600 listen     0 B b''
+06:56:18 port /dev/ttyUSB3 (usb-Xilinx_CB-U1-AEBE_21440289J04F-if03-port0)
+06:56:21    115200 listen     0 B b''
+06:56:24      9600 listen     0 B b''
+06:56:24 CSR MAGIC 0x0f7fe001 VERSION 0x7994da9f
+06:56:24 card unchanged

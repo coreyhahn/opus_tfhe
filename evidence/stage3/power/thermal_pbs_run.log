@@ -1,0 +1,374 @@
+# pbs_run silicon host snoke git 7f96e159622780937d55dcb03c13d892884f96e1-dirty date 2026-11-06T14:03:43.680696+00:00
+$ sw/pbs_run.py --keys data/v25k/ks32_s2 --count 12500 --runs 36 --expect-version 7994da9f
+prep: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_prep_P5_L184 is current (stamp matches keys + pack_ddr; images by /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_model/target/release/dump_engine on snoke)
+MAGIC=0f7fe001 VERSION=7994da9f CALIB=f
+STATUS=00000003 DONE_CNT=31262
+== seed 2: /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2, 12500 ciphertexts x 36 run(s)
+ch0: 18800640 bytes at channel offset 0x100000 (895 MB/s), read back bit-exact
+ch1: 18800640 bytes at channel offset 0x200000 (3129 MB/s), read back bit-exact
+ch3: 18800640 bytes at channel offset 0x300000 (3101 MB/s), read back bit-exact
+ch2: 31457280 bytes at channel offset 0x400000 (1564 MB/s), read back bit-exact
+KSK load: 1.97 ms host wall (STATUS 00000003)
+LUT: 192 words into io +0x100000; keys loaded in 0.67 s
+  run 0: 500/1563 batches, 4000 ct, 1.11 s
+  run 0: 1000/1563 batches, 8000 ct, 2.23 s
+  run 0: 1500/1563 batches, 12000 ct, 3.35 s
+  run 0: 1563/1563 batches, 12500 ct, 3.49 s
+run 0: 12500 PBS in 3.494 s = 3577.7 PBS/s host wall; BUSY_CYC 869493121 -> 3594.0 PBS/s @ 250.0 MHz; first-batch latency 3753.02 us; BSK_WAIT 591482396  [silicon]
+  run 1: 500/1563 batches, 4000 ct, 1.14 s
+  run 1: 1000/1563 batches, 8000 ct, 2.26 s
+  run 1: 1500/1563 batches, 12000 ct, 3.38 s
+  run 1: 1563/1563 batches, 12500 ct, 3.52 s
+run 1: 12500 PBS in 3.525 s = 3546.5 PBS/s host wall; BUSY_CYC 876635980 -> 3564.8 PBS/s @ 250.0 MHz; first-batch latency 3752.93 us; BSK_WAIT 591481681  [silicon]
+  run 2: 500/1563 batches, 4000 ct, 1.22 s
+  run 2: 1000/1563 batches, 8000 ct, 2.33 s
+  run 2: 1500/1563 batches, 12000 ct, 3.42 s
+  run 2: 1563/1563 batches, 12500 ct, 3.56 s
+run 2: 12500 PBS in 3.558 s = 3513.0 PBS/s host wall; BUSY_CYC 875165123 -> 3570.8 PBS/s @ 250.0 MHz; first-batch latency 3753.01 us; BSK_WAIT 591479619  [silicon]
+  run 3: 500/1563 batches, 4000 ct, 1.10 s
+  run 3: 1000/1563 batches, 8000 ct, 2.21 s
+  run 3: 1500/1563 batches, 12000 ct, 3.33 s
+  run 3: 1563/1563 batches, 12500 ct, 3.47 s
+run 3: 12500 PBS in 3.468 s = 3604.6 PBS/s host wall; BUSY_CYC 863223603 -> 3620.2 PBS/s @ 250.0 MHz; first-batch latency 3753.43 us; BSK_WAIT 591483712  [silicon]
+  run 4: 500/1563 batches, 4000 ct, 1.12 s
+  run 4: 1000/1563 batches, 8000 ct, 2.25 s
+  run 4: 1500/1563 batches, 12000 ct, 3.38 s
+  run 4: 1563/1563 batches, 12500 ct, 3.54 s
+run 4: 12500 PBS in 3.537 s = 3533.6 PBS/s host wall; BUSY_CYC 874919216 -> 3571.8 PBS/s @ 250.0 MHz; first-batch latency 3752.65 us; BSK_WAIT 591488961  [silicon]
+  run 5: 500/1563 batches, 4000 ct, 1.15 s
+  run 5: 1000/1563 batches, 8000 ct, 2.31 s
+  run 5: 1500/1563 batches, 12000 ct, 3.44 s
+  run 5: 1563/1563 batches, 12500 ct, 3.58 s
+run 5: 12500 PBS in 3.581 s = 3490.9 PBS/s host wall; BUSY_CYC 882624082 -> 3540.6 PBS/s @ 250.0 MHz; first-batch latency 3753.22 us; BSK_WAIT 591486923  [silicon]
+  run 6: 500/1563 batches, 4000 ct, 1.11 s
+  run 6: 1000/1563 batches, 8000 ct, 2.22 s
+  run 6: 1500/1563 batches, 12000 ct, 3.34 s
+  run 6: 1563/1563 batches, 12500 ct, 3.48 s
+run 6: 12500 PBS in 3.475 s = 3596.9 PBS/s host wall; BUSY_CYC 864203093 -> 3616.0 PBS/s @ 250.0 MHz; first-batch latency 3752.83 us; BSK_WAIT 591480121  [silicon]
+  run 7: 500/1563 batches, 4000 ct, 1.10 s
+  run 7: 1000/1563 batches, 8000 ct, 2.20 s
+  run 7: 1500/1563 batches, 12000 ct, 3.31 s
+  run 7: 1563/1563 batches, 12500 ct, 3.44 s
+run 7: 12500 PBS in 3.442 s = 3631.2 PBS/s host wall; BUSY_CYC 858295080 -> 3640.9 PBS/s @ 250.0 MHz; first-batch latency 3753.07 us; BSK_WAIT 591480579  [silicon]
+  run 8: 500/1563 batches, 4000 ct, 1.10 s
+  run 8: 1000/1563 batches, 8000 ct, 2.20 s
+  run 8: 1500/1563 batches, 12000 ct, 3.31 s
+  run 8: 1563/1563 batches, 12500 ct, 3.45 s
+run 8: 12500 PBS in 3.447 s = 3626.8 PBS/s host wall; BUSY_CYC 859295503 -> 3636.7 PBS/s @ 250.0 MHz; first-batch latency 3752.88 us; BSK_WAIT 591482002  [silicon]
+  run 9: 500/1563 batches, 4000 ct, 1.10 s
+  run 9: 1000/1563 batches, 8000 ct, 2.20 s
+  run 9: 1500/1563 batches, 12000 ct, 3.30 s
+  run 9: 1563/1563 batches, 12500 ct, 3.44 s
+run 9: 12500 PBS in 3.443 s = 3630.9 PBS/s host wall; BUSY_CYC 856801445 -> 3647.3 PBS/s @ 250.0 MHz; first-batch latency 3753.1 us; BSK_WAIT 591484023  [silicon]
+  run 10: 500/1563 batches, 4000 ct, 1.10 s
+  run 10: 1000/1563 batches, 8000 ct, 2.21 s
+  run 10: 1500/1563 batches, 12000 ct, 3.30 s
+  run 10: 1563/1563 batches, 12500 ct, 3.45 s
+run 10: 12500 PBS in 3.446 s = 3627.9 PBS/s host wall; BUSY_CYC 859323644 -> 3636.6 PBS/s @ 250.0 MHz; first-batch latency 3753.23 us; BSK_WAIT 591483833  [silicon]
+  run 11: 500/1563 batches, 4000 ct, 1.10 s
+  run 11: 1000/1563 batches, 8000 ct, 2.20 s
+  run 11: 1500/1563 batches, 12000 ct, 3.30 s
+  run 11: 1563/1563 batches, 12500 ct, 3.44 s
+run 11: 12500 PBS in 3.443 s = 3630.1 PBS/s host wall; BUSY_CYC 859224041 -> 3637.0 PBS/s @ 250.0 MHz; first-batch latency 3752.78 us; BSK_WAIT 591482399  [silicon]
+  run 12: 500/1563 batches, 4000 ct, 1.10 s
+  run 12: 1000/1563 batches, 8000 ct, 2.20 s
+  run 12: 1500/1563 batches, 12000 ct, 3.30 s
+  run 12: 1563/1563 batches, 12500 ct, 3.44 s
+run 12: 12500 PBS in 3.441 s = 3632.5 PBS/s host wall; BUSY_CYC 858091665 -> 3641.8 PBS/s @ 250.0 MHz; first-batch latency 3752.85 us; BSK_WAIT 591485109  [silicon]
+  run 13: 500/1563 batches, 4000 ct, 1.10 s
+  run 13: 1000/1563 batches, 8000 ct, 2.19 s
+  run 13: 1500/1563 batches, 12000 ct, 3.30 s
+  run 13: 1563/1563 batches, 12500 ct, 3.43 s
+run 13: 12500 PBS in 3.434 s = 3639.7 PBS/s host wall; BUSY_CYC 856495004 -> 3648.6 PBS/s @ 250.0 MHz; first-batch latency 3753.02 us; BSK_WAIT 591480155  [silicon]
+  run 14: 500/1563 batches, 4000 ct, 1.11 s
+  run 14: 1000/1563 batches, 8000 ct, 2.22 s
+  run 14: 1500/1563 batches, 12000 ct, 3.32 s
+  run 14: 1563/1563 batches, 12500 ct, 3.46 s
+run 14: 12500 PBS in 3.456 s = 3617.2 PBS/s host wall; BUSY_CYC 858228008 -> 3641.2 PBS/s @ 250.0 MHz; first-batch latency 3753.07 us; BSK_WAIT 591479863  [silicon]
+  run 15: 500/1563 batches, 4000 ct, 1.11 s
+  run 15: 1000/1563 batches, 8000 ct, 2.22 s
+  run 15: 1500/1563 batches, 12000 ct, 3.30 s
+  run 15: 1563/1563 batches, 12500 ct, 3.44 s
+run 15: 12500 PBS in 3.436 s = 3637.5 PBS/s host wall; BUSY_CYC 856969232 -> 3646.6 PBS/s @ 250.0 MHz; first-batch latency 3753.24 us; BSK_WAIT 591483304  [silicon]
+  run 16: 500/1563 batches, 4000 ct, 1.10 s
+  run 16: 1000/1563 batches, 8000 ct, 2.20 s
+  run 16: 1500/1563 batches, 12000 ct, 3.30 s
+  run 16: 1563/1563 batches, 12500 ct, 3.44 s
+run 16: 12500 PBS in 3.438 s = 3635.3 PBS/s host wall; BUSY_CYC 856878375 -> 3647.0 PBS/s @ 250.0 MHz; first-batch latency 3753.57 us; BSK_WAIT 591486495  [silicon]
+  run 17: 500/1563 batches, 4000 ct, 1.11 s
+  run 17: 1000/1563 batches, 8000 ct, 2.22 s
+  run 17: 1500/1563 batches, 12000 ct, 3.34 s
+  run 17: 1563/1563 batches, 12500 ct, 3.47 s
+run 17: 12500 PBS in 3.475 s = 3597.2 PBS/s host wall; BUSY_CYC 863528216 -> 3618.9 PBS/s @ 250.0 MHz; first-batch latency 3752.61 us; BSK_WAIT 591489090  [silicon]
+  run 18: 500/1563 batches, 4000 ct, 1.11 s
+  run 18: 1000/1563 batches, 8000 ct, 2.21 s
+  run 18: 1500/1563 batches, 12000 ct, 3.32 s
+  run 18: 1563/1563 batches, 12500 ct, 3.47 s
+run 18: 12500 PBS in 3.467 s = 3605.3 PBS/s host wall; BUSY_CYC 865230565 -> 3611.8 PBS/s @ 250.0 MHz; first-batch latency 3753.59 us; BSK_WAIT 591483681  [silicon]
+  run 19: 500/1563 batches, 4000 ct, 1.11 s
+  run 19: 1000/1563 batches, 8000 ct, 2.20 s
+  run 19: 1500/1563 batches, 12000 ct, 3.31 s
+  run 19: 1563/1563 batches, 12500 ct, 3.45 s
+run 19: 12500 PBS in 3.448 s = 3625.8 PBS/s host wall; BUSY_CYC 860200233 -> 3632.9 PBS/s @ 250.0 MHz; first-batch latency 3753.85 us; BSK_WAIT 591486006  [silicon]
+  run 20: 500/1563 batches, 4000 ct, 1.10 s
+  run 20: 1000/1563 batches, 8000 ct, 2.20 s
+  run 20: 1500/1563 batches, 12000 ct, 3.31 s
+  run 20: 1563/1563 batches, 12500 ct, 3.45 s
+run 20: 12500 PBS in 3.450 s = 3623.6 PBS/s host wall; BUSY_CYC 860605933 -> 3631.2 PBS/s @ 250.0 MHz; first-batch latency 3752.94 us; BSK_WAIT 591487092  [silicon]
+  run 21: 500/1563 batches, 4000 ct, 1.10 s
+  run 21: 1000/1563 batches, 8000 ct, 2.25 s
+  run 21: 1500/1563 batches, 12000 ct, 3.40 s
+  run 21: 1563/1563 batches, 12500 ct, 3.55 s
+run 21: 12500 PBS in 3.553 s = 3517.8 PBS/s host wall; BUSY_CYC 874313550 -> 3574.2 PBS/s @ 250.0 MHz; first-batch latency 3752.84 us; BSK_WAIT 591487704  [silicon]
+  run 22: 500/1563 batches, 4000 ct, 1.12 s
+  run 22: 1000/1563 batches, 8000 ct, 2.27 s
+  run 22: 1500/1563 batches, 12000 ct, 3.42 s
+  run 22: 1563/1563 batches, 12500 ct, 3.56 s
+run 22: 12500 PBS in 3.565 s = 3506.6 PBS/s host wall; BUSY_CYC 882062724 -> 3542.8 PBS/s @ 250.0 MHz; first-batch latency 3752.76 us; BSK_WAIT 591482673  [silicon]
+  run 23: 500/1563 batches, 4000 ct, 1.11 s
+  run 23: 1000/1563 batches, 8000 ct, 2.21 s
+  run 23: 1500/1563 batches, 12000 ct, 3.33 s
+  run 23: 1563/1563 batches, 12500 ct, 3.47 s
+run 23: 12500 PBS in 3.467 s = 3605.1 PBS/s host wall; BUSY_CYC 863251978 -> 3620.0 PBS/s @ 250.0 MHz; first-batch latency 3752.6 us; BSK_WAIT 591486698  [silicon]
+  run 24: 500/1563 batches, 4000 ct, 1.11 s
+  run 24: 1000/1563 batches, 8000 ct, 2.20 s
+  run 24: 1500/1563 batches, 12000 ct, 3.30 s
+  run 24: 1563/1563 batches, 12500 ct, 3.44 s
+run 24: 12500 PBS in 3.443 s = 3630.0 PBS/s host wall; BUSY_CYC 857720918 -> 3643.4 PBS/s @ 250.0 MHz; first-batch latency 3752.74 us; BSK_WAIT 591481208  [silicon]
+  run 25: 500/1563 batches, 4000 ct, 1.10 s
+  run 25: 1000/1563 batches, 8000 ct, 2.20 s
+  run 25: 1500/1563 batches, 12000 ct, 3.31 s
+  run 25: 1563/1563 batches, 12500 ct, 3.45 s
+run 25: 12500 PBS in 3.452 s = 3621.2 PBS/s host wall; BUSY_CYC 861551870 -> 3627.2 PBS/s @ 250.0 MHz; first-batch latency 3753.74 us; BSK_WAIT 591482165  [silicon]
+  run 26: 500/1563 batches, 4000 ct, 1.10 s
+  run 26: 1000/1563 batches, 8000 ct, 2.20 s
+  run 26: 1500/1563 batches, 12000 ct, 3.29 s
+  run 26: 1563/1563 batches, 12500 ct, 3.43 s
+run 26: 12500 PBS in 3.432 s = 3642.6 PBS/s host wall; BUSY_CYC 856946502 -> 3646.7 PBS/s @ 250.0 MHz; first-batch latency 3753.34 us; BSK_WAIT 591476775  [silicon]
+  run 27: 500/1563 batches, 4000 ct, 1.11 s
+  run 27: 1000/1563 batches, 8000 ct, 2.23 s
+  run 27: 1500/1563 batches, 12000 ct, 3.32 s
+  run 27: 1563/1563 batches, 12500 ct, 3.46 s
+run 27: 12500 PBS in 3.458 s = 3614.4 PBS/s host wall; BUSY_CYC 862650125 -> 3622.6 PBS/s @ 250.0 MHz; first-batch latency 3752.55 us; BSK_WAIT 591480219  [silicon]
+  run 28: 500/1563 batches, 4000 ct, 1.09 s
+  run 28: 1000/1563 batches, 8000 ct, 2.20 s
+  run 28: 1500/1563 batches, 12000 ct, 3.31 s
+  run 28: 1563/1563 batches, 12500 ct, 3.44 s
+run 28: 12500 PBS in 3.442 s = 3631.7 PBS/s host wall; BUSY_CYC 858594597 -> 3639.7 PBS/s @ 250.0 MHz; first-batch latency 3753.15 us; BSK_WAIT 591480992  [silicon]
+  run 29: 500/1563 batches, 4000 ct, 1.13 s
+  run 29: 1000/1563 batches, 8000 ct, 2.27 s
+  run 29: 1500/1563 batches, 12000 ct, 3.45 s
+  run 29: 1563/1563 batches, 12500 ct, 3.59 s
+run 29: 12500 PBS in 3.595 s = 3477.3 PBS/s host wall; BUSY_CYC 891986872 -> 3503.4 PBS/s @ 250.0 MHz; first-batch latency 3753.2 us; BSK_WAIT 591486585  [silicon]
+  run 30: 500/1563 batches, 4000 ct, 1.13 s
+  run 30: 1000/1563 batches, 8000 ct, 2.26 s
+  run 30: 1500/1563 batches, 12000 ct, 3.41 s
+  run 30: 1563/1563 batches, 12500 ct, 3.55 s
+run 30: 12500 PBS in 3.554 s = 3517.0 PBS/s host wall; BUSY_CYC 886010272 -> 3527.0 PBS/s @ 250.0 MHz; first-batch latency 3752.75 us; BSK_WAIT 591489764  [silicon]
+  run 31: 500/1563 batches, 4000 ct, 1.12 s
+  run 31: 1000/1563 batches, 8000 ct, 2.24 s
+  run 31: 1500/1563 batches, 12000 ct, 3.34 s
+  run 31: 1563/1563 batches, 12500 ct, 3.48 s
+run 31: 12500 PBS in 3.477 s = 3595.4 PBS/s host wall; BUSY_CYC 867307646 -> 3603.1 PBS/s @ 250.0 MHz; first-batch latency 3753.85 us; BSK_WAIT 591480952  [silicon]
+  run 32: 500/1563 batches, 4000 ct, 1.11 s
+  run 32: 1000/1563 batches, 8000 ct, 2.22 s
+  run 32: 1500/1563 batches, 12000 ct, 3.33 s
+  run 32: 1563/1563 batches, 12500 ct, 3.47 s
+run 32: 12500 PBS in 3.469 s = 3603.2 PBS/s host wall; BUSY_CYC 863831944 -> 3617.6 PBS/s @ 250.0 MHz; first-batch latency 3753.04 us; BSK_WAIT 591482802  [silicon]
+  run 33: 500/1563 batches, 4000 ct, 1.11 s
+  run 33: 1000/1563 batches, 8000 ct, 2.23 s
+  run 33: 1500/1563 batches, 12000 ct, 3.36 s
+  run 33: 1563/1563 batches, 12500 ct, 3.49 s
+run 33: 12500 PBS in 3.493 s = 3578.9 PBS/s host wall; BUSY_CYC 867000224 -> 3604.4 PBS/s @ 250.0 MHz; first-batch latency 3752.82 us; BSK_WAIT 591489663  [silicon]
+  run 34: 500/1563 batches, 4000 ct, 1.12 s
+  run 34: 1000/1563 batches, 8000 ct, 2.22 s
+  run 34: 1500/1563 batches, 12000 ct, 3.33 s
+  run 34: 1563/1563 batches, 12500 ct, 3.47 s
+run 34: 12500 PBS in 3.470 s = 3602.0 PBS/s host wall; BUSY_CYC 862664059 -> 3622.5 PBS/s @ 250.0 MHz; first-batch latency 3753.35 us; BSK_WAIT 591485922  [silicon]
+  run 35: 500/1563 batches, 4000 ct, 1.12 s
+  run 35: 1000/1563 batches, 8000 ct, 2.24 s
+  run 35: 1500/1563 batches, 12000 ct, 3.37 s
+  run 35: 1563/1563 batches, 12500 ct, 3.51 s
+run 35: 12500 PBS in 3.507 s = 3563.9 PBS/s host wall; BUSY_CYC 873188977 -> 3578.8 PBS/s @ 250.0 MHz; first-batch latency 3753.29 us; BSK_WAIT 591486068  [silicon]
+run 0 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run0.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run0.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 1 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run1.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run1.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 2 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run2.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run2.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 3 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run3.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run3.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 4 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run4.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run4.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 5 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run5.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run5.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 6 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run6.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run6.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 7 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run7.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run7.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 8 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run8.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run8.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 9 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run9.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run9.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 10 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run10.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run10.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 11 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run11.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run11.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 12 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run12.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run12.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 13 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run13.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run13.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 14 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run14.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run14.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 15 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run15.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run15.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 16 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run16.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run16.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 17 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run17.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run17.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 18 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run18.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run18.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 19 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run19.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run19.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 20 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run20.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run20.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 21 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run21.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run21.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 22 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run22.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run22.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 23 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run23.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run23.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 24 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run24.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run24.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 25 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run25.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run25.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 26 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run26.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run26.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 27 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run27.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run27.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 28 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run28.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run28.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 29 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run29.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run29.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 30 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run30.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run30.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 31 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run31.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run31.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 32 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run32.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run32.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 33 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run33.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run33.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 34 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run34.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run34.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+run 35 checks:
+  bit-exact vs model_rns.pbs.u64: 12500/12500 ciphertexts equal
+  $ /home/cah/r2d2/code/fpga/opus_tfhe/ref/tfhe_oracle/target/release/tfhe_oracle decrypt --keys /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2 --input /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run35.u64 --kind pbs --json /home/cah/r2d2/code/fpga/opus_tfhe/data/v25k/ks32_s2/pbs_run/20261106_070343/pbs_out_s2_run35.dec.json
+  tfhe-rs decrypt: 12500 ct, failures 0, log2_std 49.02
+seed 2 run 0: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3577.7 busy 3594.0 [silicon]
+seed 2 run 1: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3546.5 busy 3564.8 [silicon]
+seed 2 run 2: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3513.0 busy 3570.8 [silicon]
+seed 2 run 3: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3604.6 busy 3620.2 [silicon]
+seed 2 run 4: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3533.6 busy 3571.8 [silicon]
+seed 2 run 5: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3490.9 busy 3540.6 [silicon]
+seed 2 run 6: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3596.9 busy 3616.0 [silicon]
+seed 2 run 7: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3631.2 busy 3640.9 [silicon]
+seed 2 run 8: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3626.8 busy 3636.7 [silicon]
+seed 2 run 9: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3630.9 busy 3647.3 [silicon]
+seed 2 run 10: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3627.9 busy 3636.6 [silicon]
+seed 2 run 11: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3630.1 busy 3637.0 [silicon]
+seed 2 run 12: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3632.5 busy 3641.8 [silicon]
+seed 2 run 13: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3639.7 busy 3648.6 [silicon]
+seed 2 run 14: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3617.2 busy 3641.2 [silicon]
+seed 2 run 15: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3637.5 busy 3646.6 [silicon]
+seed 2 run 16: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3635.3 busy 3647.0 [silicon]
+seed 2 run 17: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3597.2 busy 3618.9 [silicon]
+seed 2 run 18: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3605.3 busy 3611.8 [silicon]
+seed 2 run 19: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3625.8 busy 3632.9 [silicon]
+seed 2 run 20: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3623.6 busy 3631.2 [silicon]
+seed 2 run 21: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3517.8 busy 3574.2 [silicon]
+seed 2 run 22: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3506.6 busy 3542.8 [silicon]
+seed 2 run 23: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3605.1 busy 3620.0 [silicon]
+seed 2 run 24: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3630.0 busy 3643.4 [silicon]
+seed 2 run 25: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3621.2 busy 3627.2 [silicon]
+seed 2 run 26: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3642.6 busy 3646.7 [silicon]
+seed 2 run 27: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3614.4 busy 3622.6 [silicon]
+seed 2 run 28: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3631.7 busy 3639.7 [silicon]
+seed 2 run 29: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3477.3 busy 3503.4 [silicon]
+seed 2 run 30: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3517.0 busy 3527.0 [silicon]
+seed 2 run 31: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3595.4 busy 3603.1 [silicon]
+seed 2 run 32: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3603.2 busy 3617.6 [silicon]
+seed 2 run 33: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3578.9 busy 3604.4 [silicon]
+seed 2 run 34: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3602.0 busy 3622.5 [silicon]
+seed 2 run 35: count 12500 failures 0 bit-exact-mismatch 0 PBS/s wall 3563.9 busy 3578.8 [silicon]
+PASS
+evidence: /home/cah/r2d2/code/fpga/opus_tfhe/evidence/stage3/pbs_run/pbs_run_20261106_070343_s2.json /home/cah/r2d2/code/fpga/opus_tfhe/evidence/stage3/pbs_run/pbs_run_20261106_070343_s2.log
